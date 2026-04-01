@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from core.logger import logger
-from models.config_models import JobListing
 from selenium.webdriver.common.by import By
 import os
 from config.settings import settings
@@ -29,7 +28,7 @@ class BaseStrategy(ABC):
         pass
 
     @abstractmethod
-    def apply(self, listing: JobListing):
+    def apply(self, listing: dict):
         """
         Navigates to listing.job_url and attempts to apply.
         Returns True if successful, False otherwise.
