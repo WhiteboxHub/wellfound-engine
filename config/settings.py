@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     
     # Backend API
     BACKEND_URL: str = "http://localhost:8001"
+    AUTH_URL: Optional[str] = None
+    AUTH_USERNAME: Optional[str] = None
+    AUTH_PASSWORD: Optional[str] = None
     
     # Browser
     CHROME_USER_DATA_DIR: str = "./chrome_profile"
